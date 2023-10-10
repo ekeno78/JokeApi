@@ -70,6 +70,18 @@ button.addEventListener("click", (event) => {
 
 })
 
+// bouton qui supprime tout le tableau 
+var deleteButton = document.getElementById("dltButton");
+// lorsque l'on clique une fonction est appelée
+deleteButton.onclick = function() {
+    // On met dans la variable nbRow toutes les lignes du tableau 
+    var nbRow = tableBody.rows.length;
+    // on efface une ligne tu tableau tant que i n'est pas inférieur ou égal à 0 
+    for (var i = nbRow - 1; i >= 0; i--) {
+        tableBody.deleteRow(i);
+    }
+};
+
 
 
 
